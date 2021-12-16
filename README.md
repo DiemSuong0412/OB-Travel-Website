@@ -21,7 +21,7 @@ trong folder css có file footer.css
 trong folder js có file footer.js
 => muốn get footer thì trong file .html muốn get, gán link vào:
 
-<head>
+    <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     
