@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: none;
+}
+html {
+  overflow-x: hidden;
+  font-size: 100%;
+}
+:root {
+  --main-color: #0098a1;
+}
+body {
+  background: #333;
+  height: 100%;
+}
+header {
+  width: 98%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0;
+  transition: 0.2s linear;
+  z-index: 1000;
+}
+.header-active {
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  padding-left: 0.5rem;
+}
+header .logo {
+  color: #333;
+  margin: 0;
+  display: inline-block;
+}
+header .logo img {
+  width: 7rem;
+  margin-left: 0.5rem;
+}
+header .search-bar {
+  width: 18%;
+  background-color: #ededed;
+  font-size: 1.4rem;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 100px;
+  display: inline-block;
+  padding-left: 1rem;
+  margin: 0.5rem 2rem 0.5rem 8rem;
+  position: absolute;
+}
+header .search-icons {
+  border: none;
+  background-color: #ededed;
+  cursor: pointer;
+}
+header .search-input {
+  background-color: #ededed;
+  border: none;
+  width: 80%;
+  height: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-right: 1rem;
+  outline: none;
+  font-size: 1rem;
+}
+header .navbar {
+  position: absolute;
+  padding: 5px;
+  right: 0;
+}
+header .navbar-list {
+  list-style: none;
+  display: flex;
+}
+header .navbar li {
+  margin: 0 0.6rem;
+  display: inline-flex;
+  align-items: center;
+}
+header .navbar a {
+  font-size: 1.2rem;
+  color: #333;
+  transition: 0.2s linear;
+}
+header .navbar a span {
+  display: none;
+}
+.fas {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  cursor: pointer;
+  margin-right: 0.2rem;
+  position: relative;
+}
+header .nav-toggle {
+  top: 5.5rem;
+  opacity: 1;
+}
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+  color: var(--main-color);
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: var(--main-color);
+  cursor: pointer;
+  display: none;
+  margin-right: 1rem;
+  margin-bottom: 0.2rem;
+  position: absolute;
+  right: 0px;
+  bottom: 3px;
+}
+
+@media screen and (max-width: 1290px) {
+  header .search-bar {
+    width: 80%;
+    text-align: left;
+    padding-left: 1rem;
+    margin: 9rem;
+    position: absolute;
+  }
+  header .search-input {
+    width: 95%;
+    height: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+  header .fa-bars {
+    display: block;
+    font-size: 2rem;
+  }
+  header .navbar {
+    position: fixed;
+    top: -100rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.2s linear;
+    opacity: 0;
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding-left: 0;
+  }
+  header .navbar ul li {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .navbar ul li a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+  header .navbar li a span {
+    display: unset;
+  }
+  header .nav-toggle {
+    top: 4rem;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1020px) {
+  header .search-bar {
+    width: 70%;
+    text-align: left;
+    padding-left: 1rem;
+    margin: 9rem;
+    position: absolute;
+  }
+  header .search-input {
+    width: 90%;
+    height: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media screen and (max-width: 1010px) {
+  header .search-bar {
+    width: 65%;
+    text-align: left;
+    padding-left: 1rem;
+    margin: 9rem;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .search-bar {
+    width: 55%;
+    text-align: left;
+    padding-left: 1rem;
+    margin: 9rem;
+    position: absolute;
+  }
+}
